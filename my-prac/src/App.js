@@ -9,13 +9,16 @@ import { BrowserRouter as Router ,Switch,Route} from "react-router-dom";
 import {Services} from "./Components/Pages/Home";
 import {About} from "./Components/Pages/About";
 import {Contact} from "./Components/Pages/Contact";
+import ClassCount from './Components/ClassCounter/ClassCounter.';
   
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
+
+      <ClassCount/>
+      {/* <Router>
       <NavigationBar/>
       <Switch>
         <Route path="/Services"><Services/></Route>
@@ -23,7 +26,7 @@ function App() {
         <Route path="/Contact"><Contact/></Route>
         <Route path="/MainBody"><MainBody/></Route>
       </Switch>
-      </Router>
+      </Router> */}
 
       {/* <Header/> */}
       {/* <Footer/> */}
