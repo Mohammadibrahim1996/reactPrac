@@ -6,14 +6,14 @@ const initialState={
     ],
 };
 
-const empReducer=(state,action)=>{
+ export const empReducer=(state=initialState,action)=>{
     switch(action.type){
-        case " ADD-EMP":
+        case "ADDEMP":
             return{
-
                 ...state,
                 emp:[action.emp,...state.emp],
             };
+
             default: return state;
      }
 };

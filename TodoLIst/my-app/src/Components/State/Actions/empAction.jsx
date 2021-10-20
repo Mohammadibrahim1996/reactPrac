@@ -1,5 +1,5 @@
 export const addNewEmp=(empName,empAge,empAdd)=>({
-    type:"ADD-EMP",
+    type:"ADDEMP",
     emp:{
         empName,
         empAge,

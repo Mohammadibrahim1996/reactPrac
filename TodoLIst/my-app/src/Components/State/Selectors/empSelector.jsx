@@ -1,3 +1,4 @@
- export const getAllEmp = (state) => state.EmpReducer.emp;
+ export const getAllEmp = (state) => state.empReducer.emp;
+
 
 
