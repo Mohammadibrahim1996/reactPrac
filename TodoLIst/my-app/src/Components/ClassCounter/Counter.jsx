@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import { CounterClassChild } from "./CounterClassChild";
 
  export class ClassCounter extends Component {
     constructor(props){
@@ -14,7 +15,7 @@ import React,{Component} from "react";
         render() {
             return (
                 <div>
-              <h4>Count:{this.state.count}</h4>
+                    <CounterClassChild showcount={this.state.count}/>
               <button onClick={this.handleIncrement}>Increment</button>
               <button onClick={this.handleDecrement}>Decrement</button>
 
