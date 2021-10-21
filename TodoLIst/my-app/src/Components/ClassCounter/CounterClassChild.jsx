@@ -1,5 +1,12 @@
 import React,{Component} from "react";
   export class CounterClassChild extends Component{
+    handleIncrement=()=>{
+        this.setState((prevState)=>({count:prevState.count+1}))
+        };
+        handleDecrement=()=>{
+            this.setState((prevState)=>({count:prevState.count-1}))
+        };
+
      render(){
          return(
              <div>
