@@ -19,8 +19,7 @@ export const Counter = () => {
 <div>
             <div style={{
         fontSize: '120%',
-        position: 'relative',
-        top: '10vh'}}> 
+        position: 'relative'}}> 
                 {counter}
             </div>
             <div>
