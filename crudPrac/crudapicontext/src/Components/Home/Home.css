@@ -1,0 +1,12 @@
+ .h1{
+     background-color: lightskyblue;
+     color: black;
+ }
+.button{
+    position: relative;
+    margin-left: 1300px;
+    display: inline-block;
+}
+/* .modal{
+    margin: 10px;
+} */
