@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import {Modal, Form, Row,Col,Button, InputGroup} from 'react-bootstrap'
+import {Modal, Form, Row,Col,Button, InputGroup, Dropdown} from 'react-bootstrap'
 // import ModalHeader from 'react-bootstrap/esm/ModalHeader';
 
 export const RegistartionForm=()=> {
-    const [user,setUser]= useState({firstName:"",lastName:"",email:"",password:"",address:"",state:"",city:"",zip:""}
-    )
+    const [user,setUser]= useState([])
+// {firstName:"",lastName:"",email:"",password:"",address:"",state:"",city:"",zip:"",profession:""}
     let name, value;
     const onInputChange=(e)=>{
         name= e.target.name;
@@ -21,6 +21,7 @@ export const RegistartionForm=()=> {
       }
   
       setValidated(true);
+      localStorage.setItem("data", name)
     };
 
     return (
@@ -29,7 +30,7 @@ export const RegistartionForm=()=> {
 <Modal.Dialog >
     <Modal.Header>
         <Modal.Title>
-            Client Details
+            Sign Up
         </Modal.Title>
     </Modal.Header>
 
@@ -38,18 +39,18 @@ export const RegistartionForm=()=> {
 <Form noValidate validated={validated} onSubmit={handleSubmit}>
   <Row className="mb-3">
     <Form.Group as={Col} controlId="formGridFirstName">
-      <Form.Label>First Name</Form.Label>
+      <Form.Label>Name</Form.Label>
       <Form.Control required type="Text" value={user.firstName} name="firstName" placeholder="Enter First Name" onChange={onInputChange}/>
       <Form.Control.Feedback type="invalid">  first name Error</Form.Control.Feedback>
 
     </Form.Group>
-
+{/* 
     <Form.Group as={Col} controlId="formGridLastName">
       <Form.Label>Last Name</Form.Label>
       <Form.Control required type="Text" value={user.lastName} name="lastName"  onChange={onInputChange} placeholder="Enter LAst Name" />
       <Form.Control.Feedback type="invalid"> last Name Error</Form.Control.Feedback>
-    </Form.Group>
-  </Row>
+    </Form.Group> */}
+  </Row> 
 
 
   <Row className="mb-3">
@@ -70,15 +71,15 @@ export const RegistartionForm=()=> {
 
     </Form.Group>
   </Row>
-
+{/* 
   <Form.Group className="mb-3" controlId="formGridAddress1">
     <Form.Label>Address</Form.Label>
     <Form.Control  required value={user.address} name="address" onChange={onInputChange} placeholder="1234 Main St" />
     <Form.Control.Feedback type="invalid"> Error</Form.Control.Feedback>
 
-  </Form.Group>
+  </Form.Group> */}
 
-  <Row className="mb-3">
+  {/* <Row className="mb-3">
     <Form.Group as={Col} controlId="formGridCity">
       <Form.Label>City</Form.Label>
       <Form.Control required value={user.city} onChange={onInputChange} name="city" type="text" placeholder="City Name" />
@@ -100,8 +101,18 @@ export const RegistartionForm=()=> {
       <Form.Control.Feedback type="invalid"> please Provide Zip</Form.Control.Feedback>
 
     </Form.Group>
-  </Row>
+  </Row> */}
+<Dropdown>
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    Profession
+  </Dropdown.Toggle>
 
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Doctor</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Engineering</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Politician</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
   <Form.Group className="mb-3" id="formGridCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
