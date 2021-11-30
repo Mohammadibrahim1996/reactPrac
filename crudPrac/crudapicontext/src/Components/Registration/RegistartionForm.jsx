@@ -3,8 +3,8 @@ import {Modal, Form, Row,Col,Button, InputGroup, Dropdown} from 'react-bootstrap
 // import ModalHeader from 'react-bootstrap/esm/ModalHeader';
 
 export const RegistartionForm=()=> {
-    const [user,setUser]= useState([])
-// {firstName:"",lastName:"",email:"",password:"",address:"",state:"",city:"",zip:"",profession:""}
+
+const [user,setUser]= useState([{firstName:"",lastName:"",email:"",password:"",address:"",state:"",city:"",zip:"",profession:""}])
     let name, value;
     const onInputChange=(e)=>{
         name= e.target.name;
@@ -21,7 +21,7 @@ export const RegistartionForm=()=> {
       }
   
       setValidated(true);
-      localStorage.setItem("data", name)
+      localStorage.setItem("user","name");
     };
 
     return (
@@ -44,12 +44,7 @@ export const RegistartionForm=()=> {
       <Form.Control.Feedback type="invalid">  first name Error</Form.Control.Feedback>
 
     </Form.Group>
-{/* 
-    <Form.Group as={Col} controlId="formGridLastName">
-      <Form.Label>Last Name</Form.Label>
-      <Form.Control required type="Text" value={user.lastName} name="lastName"  onChange={onInputChange} placeholder="Enter LAst Name" />
-      <Form.Control.Feedback type="invalid"> last Name Error</Form.Control.Feedback>
-    </Form.Group> */}
+
   </Row> 
 
 
@@ -71,37 +66,7 @@ export const RegistartionForm=()=> {
 
     </Form.Group>
   </Row>
-{/* 
-  <Form.Group className="mb-3" controlId="formGridAddress1">
-    <Form.Label>Address</Form.Label>
-    <Form.Control  required value={user.address} name="address" onChange={onInputChange} placeholder="1234 Main St" />
-    <Form.Control.Feedback type="invalid"> Error</Form.Control.Feedback>
 
-  </Form.Group> */}
-
-  {/* <Row className="mb-3">
-    <Form.Group as={Col} controlId="formGridCity">
-      <Form.Label>City</Form.Label>
-      <Form.Control required value={user.city} onChange={onInputChange} name="city" type="text" placeholder="City Name" />
-      <Form.Control.Feedback type="invalid"> Please Provide City Name</Form.Control.Feedback>
-
-    </Form.Group>
-
-    <Form.Group as={Col} controlId="formGridState">
-      <Form.Label>State</Form.Label>
-      <Form.Control required value={user.state} onChange={onInputChange}  name="state" type ="text" placeholder="State"/>
-      <Form.Control.Feedback type="invalid"> Please provide State</Form.Control.Feedback>
-    </Form.Group>
-
-      
-
-    <Form.Group as={Col} controlId="formGridZip">
-      <Form.Label>Zip</Form.Label>
-      <Form.Control required value={user.zip} onChange={onInputChange} name="zip" />
-      <Form.Control.Feedback type="invalid"> please Provide Zip</Form.Control.Feedback>
-
-    </Form.Group>
-  </Row> */}
 <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
     Profession
@@ -118,7 +83,7 @@ export const RegistartionForm=()=> {
   </Form.Group>
 
   <Button variant="primary" type="submit">
-    Submit
+    Sign Up
   </Button>
 </Form>
 </Modal.Body>
