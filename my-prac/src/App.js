@@ -11,13 +11,15 @@ import {Contact} from "./Components/Pages/Contact";
 import ClassCount from './Components/ClassCounter/ClassCounter.';
 import {Prac} from './Components/Prac/Prac';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ConditionalRendring } from './Components/Conditional/ConditionalRendring';
   
 
 
 function App() {
   return (
     <div className="App">
-      <Prac/>
+      <ConditionalRendring/>
+      {/* <Prac/> */}
 {/* 
       <ClassCount/>
       <Router>
