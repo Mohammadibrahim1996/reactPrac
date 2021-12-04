@@ -10,15 +10,20 @@ import {About} from "./Components/Pages/About";
 import {Contact} from "./Components/Pages/Contact";
 import ClassCount from './Components/ClassCounter/ClassCounter.';
 import {Prac} from './Components/Prac/Prac';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { ConditionalRendring } from './Components/Conditional/ConditionalRendring';
+import {Filter} from "./Components/Filter/Filter"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import LifeCycleMethods from './Components/ClassCounter/LifeCycleMethods';
   
 
 
 function App() {
   return (
     <div className="App">
-      <ConditionalRendring/>
+      <LifeCycleMethods/>
+      {/* <Filter/> */}
+
+      {/* <ConditionalRendring/> */}
       {/* <Prac/> */}
 {/* 
       <ClassCount/>
