@@ -4,8 +4,9 @@ import {Modal, Form, Row,Col,Button, InputGroup, Dropdown} from 'react-bootstrap
 
 export const RegistartionForm=()=> {
 
-let [user,setUser]= useState({firstName:"",lastName:"",email:"",password:"",address:"",state:"",city:"",zip:"",profession:""})
+let [user,setUser]= useState({firstName:"",email:"",password:"",profession:""})
     let name, value;
+  
     const onInputChange=(e)=>{
         name= e.target.name;
         value= e.target.value;
@@ -21,8 +22,8 @@ let [user,setUser]= useState({firstName:"",lastName:"",email:"",password:"",addr
       }
   
       setValidated(true);
-
-      localStorage.setItem("name",setUser())
+      localStorage.setItem("name",JSON.stringify(user));
+      
       
     };
 
