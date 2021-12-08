@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+// import {Counter} from './Counter/Counter'
 import './App.css';
 
 
@@ -17,6 +18,7 @@ const handleSubmit=()=>{
  
   return (
     <div className="App">
+      {/* <Counter/> */}
       <h1>
         Login Input
       </h1>
