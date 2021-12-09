@@ -1,14 +1,15 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react'
+import { Room } from './Components/Pages/Room'
+import { GuestInfo } from './Components/Pages/GuestInfo';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import { Booking } from './Components/Booking/Booking';
 
-function App() {
+export default function App() {
   return (
-    <div >
-      <Booking/>
-         </div>
-  );
+    <div>
+      <GuestInfo/>
+      <Room/>
+    </div>
+  )
 }
-
-export default App;
