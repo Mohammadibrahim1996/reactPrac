@@ -14,13 +14,16 @@ import { ConditionalRendring } from './Components/Conditional/ConditionalRendrin
 import {Filter} from "./Components/Filter/Filter"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LifeCycleMethods from './Components/ClassCounter/LifeCycleMethods';
+import { ComplicatedCounter } from './Components/UseReducer/ComplicatedCounter';
   
 
 
 function App() {
   return (
     <div className="App">
-      <LifeCycleMethods/>
+<ComplicatedCounter/>
+
+      {/* <LifeCycleMethods/> */}
       {/* <Filter/> */}
 
       {/* <ConditionalRendring/> */}
