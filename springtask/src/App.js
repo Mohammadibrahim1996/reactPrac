@@ -1,11 +1,12 @@
 import React from "react";
 import { Home } from "./Components/Home/Home";
 import { Login } from "./Components/Login/Login";
-import {  HashRouter,Routes ,Route } from "react-router-dom";
+import { BrowserRouter as Router,Routes,Switch ,Route } from "react-router-dom";
 import { NoMatch } from "./Components/Home/NoMatch";
 import { Provider } from "react-redux";
 import { ConfigStore } from "./Components/State/Store";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store=ConfigStore();
 
@@ -15,15 +16,16 @@ var x="/Home"
     
       <Provider store={store}>
         <React.Fragment>
-          <HashRouter>
-            <Routes>
-            <Route exact path={x} component={()=><Home authorized={false} />}> 
+          <Router>
+            <Switch>
+            <Route  path={x} component={()=><Home authorized={true} />}> 
             <Home/>
+            <h1>heelo</h1>
              </Route>
-              <Route exact path="/"><Login/></Route>
+              <Route  path="/"><Login/></Route>
               <Route path='*' component={NoMatch}></Route>
-            </Routes>
-          </HashRouter>
+            </Switch>
+          </Router>
         </React.Fragment>
       </Provider>
      

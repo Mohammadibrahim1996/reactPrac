@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Form, Button} from "react-bootstrap";
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 export const Login = () => {
   const [user, setUser] = useState();
   const [password, setPassword] = useState();
   const [validated, setValidated] = useState(false);
   const [state, setState] = useState(false);
-  let history = useHistory();
+  let history = useNavigate();
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -22,6 +22,7 @@ export const Login = () => {
 
   return (
     <div className="loginForm">
+      <h1>login</h1>
       <Form
         className="loginForm"
         noValidate
