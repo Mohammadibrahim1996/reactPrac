@@ -1,15 +1,13 @@
 import React from 'react'
-import { Room } from './Components/Pages/Room'
-import { GuestInfo } from './Components/Pages/GuestInfo';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Login from './Components/Pages/Login';
 
 
 export default function App() {
   return (
     <div>
-      <GuestInfo/>
-      <Room/>
+      <Login/>
     </div>
   )
 }
