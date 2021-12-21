@@ -1,0 +1,23 @@
+.card-parent{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards{
+    margin: 10px;
+    background-color: antiquewhite;
+    width: 300px;
+    box-shadow: seagreen 3px 3px 5px , -3px -3px 5px seagreen;
+    transition: .5s;
+}
+.cards:hover{
+    box-shadow: none;
+}
+.image{
+    margin-top: 25px;
+    transition: 0.4s;
+}
+.image:hover{
+    box-shadow: seagreen 2px 2px 5px , -2px -2px 5px;
+}
