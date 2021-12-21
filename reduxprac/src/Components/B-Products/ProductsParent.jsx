@@ -24,6 +24,7 @@ export const ProductsParent = ({search}) => {
  },[])
     return (
         <div>
+            <h1>PRODUCTS PARENT</h1>
             <div className='card-parent'>
             {
                 products.map((item)=>{
