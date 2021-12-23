@@ -15,13 +15,16 @@ import {Filter} from "./Components/Filter/Filter"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LifeCycleMethods from './Components/ClassCounter/LifeCycleMethods';
 import { ComplicatedCounter } from './Components/UseReducer/ComplicatedCounter';
+import Exercise from './Components/Exercise/Exercise';
   
 
 
 function App() {
   return (
     <div className="App">
-<ComplicatedCounter/>
+
+      <Exercise/>
+{/* <ComplicatedCounter/> */}
 
       {/* <LifeCycleMethods/> */}
       {/* <Filter/> */}
