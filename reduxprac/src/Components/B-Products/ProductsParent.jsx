@@ -17,7 +17,7 @@ export const ProductsParent = ({ search }) => {
   }, [search]);
   const getApiData = async () => {
     const apiData = await axios.get(
-      "https://api.themoviedb.org/3/movie/550?api_key=b233b2dcce5ebb9aaff82b124bff0787"
+      "https://fakestoreapi.com/products"
     );
     console.log(apiData.production_companies);
     dispatch({ type: "ADD-PRODUCT", data: apiData.data });
